@@ -2,7 +2,7 @@ public class AplikasiTodoList {
 
     public static String[] model = new String[10];
     public static void main(String[] args) {
-        
+        testShowTodoList();
     }
 
     /**
@@ -13,9 +13,18 @@ public class AplikasiTodoList {
             var todo = model[i];
             var no = i + 1;
             if(todo != null) {
-                System.out.println(no + "." + todo);
+                System.out.println(no + ". " + todo);
             }
         }
+    }
+
+    /**
+     * Test menampilkan todo list
+     */
+    public static void testShowTodoList() {
+        model[0] = "Belajar Java Dasar";
+        model[1] = "Studi Kasus Java Dasar : Aplikasi Todo List";
+        showTodoList();
     }
 
     /**
