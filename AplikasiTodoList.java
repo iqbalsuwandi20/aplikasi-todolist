@@ -3,7 +3,7 @@ public class AplikasiTodoList {
     public static String[] model = new String[10];
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
     public static void main(String[] args) {
-        testViewAddTodoList();
+        viewShowTodoList();
     }
 
     /**
@@ -193,6 +193,17 @@ public class AplikasiTodoList {
                 System.out.println("Gagal menghapus todolist : " + number);
             }
         }
+    }
+    /**
+     * Test menampilkan view menghapus todo list
+     */
+    public static void testViewRemoveTodoList() {
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        showTodoList();
+        viewRemoveTodoList();
+        showTodoList(); 
     }
     
 }
