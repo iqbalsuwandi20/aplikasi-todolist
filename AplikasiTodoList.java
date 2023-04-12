@@ -127,21 +127,21 @@ public class AplikasiTodoList {
      */
     public static void viewShowTodoList() {
         while(true) {
-        showTodoList();
-        System.out.println("MENU : ");
-        System.out.println("1. Tambah");
-        System.out.println("2. Hapus");
-        System.out.println("X. Keluar");
-        var input = input("Pilih");
-        if(input.equals("1")) {
-            viewAddShowTodoList();
-        } else if(input.equals("2")) {
-            viewRemoveTodoList();
-        } else if(input.equals("X")) {
-            break;
-        } else {
-            System.out.println("Pilihan tidak dimengerti");
-        }
+            showTodoList();
+            System.out.println("MENU : ");
+            System.out.println("1. Tambah");
+            System.out.println("2. Hapus");
+            System.out.println("X. Keluar");
+            var input = input(("Pilih"));
+            if(input.equals("1")) {
+                viewAddShowTodoList();
+            } else if(input.equals("2")) {
+                viewRemoveTodoList();
+            } else if(input.equals("X")) {
+                break;
+            } else {
+                System.out.println("Pilihan tidak di mengerti");
+            }
         }
     }
     /**
@@ -161,7 +161,13 @@ public class AplikasiTodoList {
      * menampilkan view menambah todo list
      */
     public static void viewAddShowTodoList() {
-
+        System.out.println("MENAMBAH TODOLIST");
+        var todo = input("Todo (X Jika Batal)");
+        if(todo.equals("X")) {
+            // Batal
+        } else {
+            addTodoList(todo);
+        }
     }
 
     /**
