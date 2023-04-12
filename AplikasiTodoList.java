@@ -3,7 +3,7 @@ public class AplikasiTodoList {
     public static String[] model = new String[10];
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
     public static void main(String[] args) {
-        testViewShowTodoList();
+        testViewAddTodoList();
     }
 
     /**
@@ -168,6 +168,15 @@ public class AplikasiTodoList {
         } else {
             addTodoList(todo);
         }
+    }
+    /**
+     * Test menampilkan view menambah todo list
+     */
+    public static void testViewAddTodoList() {
+        addTodoList("Satu");
+        addTodoList("Dua");
+        viewAddShowTodoList();
+        showTodoList();
     }
 
     /**
